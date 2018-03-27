@@ -18,4 +18,17 @@ $(document).ready(function(){
     totaldiv.text(number);
     testNumLength(number);
   });
+  $('#operators a').not('#equals').click(function() {
+    operator = $(this).text();
+    newnumber = number;
+    number = '';
+    totaldiv.text('0');
+  });
+  $('#numbers > a').click(function() {
+    number='';
+    totaldiv.text("0");
+    if ('#clearall') {
+      newnumber='0';
+    }
+  });
 });
