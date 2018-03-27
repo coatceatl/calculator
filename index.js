@@ -1,9 +1,5 @@
-/*
-window.onload = function () {
-    document.getElementById('#lets_go').innerHTML = 'Lemme Go!';
-};
-*/
-
 $(document).ready(function() {
-    $('#lets_go').text('Lemme Go!');
+    $('#button').click(function() {
+        $('#change_me').text('I have been changed!');
+    });
 });
