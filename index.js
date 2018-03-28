@@ -24,11 +24,21 @@ $(document).ready(function(){
     number = '';
     totaldiv.text('0');
   });
-  $('#numbers > a').click(function() {
-    number='';
-    totaldiv.text("0");
-    if ('#clearall') {
-      newnumber='0';
+  $('#clear,#clearall').click(function(){
+    number = '';
+    totaldiv.text('0');
+    if ($(this).attr('id') === 'clearall') {
+      newnumber = '';
+    }
+  });
+  $('#equals').click(function(){
+    if (operator === '+'){
+      ANSWER = (parseInt(newnumber, 10) + parseInt(number, 10)).toString(10);
+      totaldiv.text(ANSWER);
+      testNumLength(ANSWER);
+      number = '';
+      newnumber = '';
     }
   });
 });
+
