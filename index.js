@@ -34,11 +34,17 @@ $(document).ready(function(){
   $('#equals').click(function(){
     if (operator === '+'){
       ANSWER = (parseInt(newnumber, 10) + parseInt(number, 10)).toString(10);
-      totaldiv.text(ANSWER);
-      testNumLength(ANSWER);
-      number = '';
-      newnumber = '';
+    } else if (operator === '-'){
+      ANSWER = (parseInt(newnumber, 10) - parseInt(number, 10)).toString(10);
+    } else if (operator === '*'){
+      ANSWER = (parseInt(newnumber, 10) * parseInt(number, 10)).toString(10);
+    } else if (operator === '/'){
+      ANSWER = (parseInt(newnumber, 10) / parseInt(number, 10)).toString(10);
     }
+    totaldiv.text(ANSWER);
+    testNumLength(ANSWER);
+    number = '';
+    newnumber = '';
   });
 });
 
